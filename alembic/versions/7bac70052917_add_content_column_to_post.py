@@ -21,6 +21,6 @@ def upgrade():
     pass
 
 
-def downgrade() -> None:
-    # op.drop_column('posts','content')
+def downgrade():
+    op.drop_column('posts','content')
     pass
