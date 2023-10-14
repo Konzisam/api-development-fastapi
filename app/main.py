@@ -13,7 +13,7 @@ from.config import settings
 
 app = FastAPI()
 
-origins = ["https://www.google.com"]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
@@ -31,7 +31,7 @@ app.include_router(vote.router)
 
 @app.get("/")
 def read_root():
-    return {"Hello": "Welcome World!!!"}
+    return {"Hello": "Welcome World changes made manually"}
     
 
 
